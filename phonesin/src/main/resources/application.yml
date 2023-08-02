@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: db
+  jpa:
+    hibernate:
+      ddl-auto: update # 운영시에는 validate 추천
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+jwt:
+  secret: VlwEyVBsYt9V7zq57TejMnVUyzblYcfPQye08f7MGVA9XkHa
