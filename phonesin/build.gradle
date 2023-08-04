@@ -18,6 +18,27 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// swagger
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+
+	// mysql + jpa
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	implementation 'javax.persistence:javax.persistence-api'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// QueryDSLa
+	implementation 'com.querydsl:querydsl-core'
+	implementation 'com.querydsl:querydsl-jpa'
+
+	// Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 }
 
 tasks.named('test') {
